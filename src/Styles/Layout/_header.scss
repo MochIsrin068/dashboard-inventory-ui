@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #EFEFEF;
+    margin-bottom: 16px;
+
+    &__title{
+        text-transform: capitalize;
+        // font-size: 18px;
+
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 36px;
+        /* identical to box height */
+
+        letter-spacing: 1px;
+
+        color: #3C3F88;
+    }   
+
+    &__account{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        >img{
+            margin-left: 16px;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.barang{
+    &__title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #353E6C;
+        margin-bottom: 19px;
+    }
+
+    &__tableWrapper{
+        display: flex;
+        flex-direction: column;
+        height: 405px;
+        background: #FFFFFF;
+        border-radius: 30px;
+
+        padding: 32px;
+
+        &__action{
+            display : flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #F4F5F7;
+
+            >div{
+                display: flex;
+                align-items: center;
+                width: 50%;
+                justify-content: space-between;
+
+                >div:nth-child(1){
+                    display: flex;
+                    align-items: center;
+                    margin-right: 100px;
+
+                    >img{
+                        margin-right: 10px;
+                        cursor: pointer;
+                        width: 34%;
+                    }
+
+                    >span{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-align: right;
+                        letter-spacing: 0.5px;
+                        color: #276BF0;
+                        cursor: pointer;
+                    }
+                }
+
+                >div:nth-child(2){
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(0, 0, 0, 0.03);
+                    padding:0 16px;
+                    border-radius: 12px;
+
+                    >img{
+                        margin-right: 10px;
+                    }
+
+                    >input{
+                        padding: 16px;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        border-radius: 6px;
+                        width: 100%;
+                    }
+                }
+                
+            }
+
+            >span{
+                cursor: pointer;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 18px;
+                text-align: right;
+                letter-spacing: 0.5px;
+                color: #276BF0;
+            }
+            
+        }
+    }
+}

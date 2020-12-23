@@ -1,0 +1,219 @@
+.detail{
+    &__breadcumb{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: 0.5px;
+        color: #353E6C;
+        margin-bottom: 20px;
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        &__title{
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            color: #353E6C;
+        }
+
+        &__button{
+            >button{
+                background: linear-gradient(270deg, #4F9ACD 0%, #4F9ACD 100%);
+                box-shadow: 0px 15px 30px rgba(20, 102, 204, 0.16);
+                border-radius: 16px;
+                padding: 12px 32px;
+                text-align: center;
+
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: right;
+                letter-spacing: 0.5px;
+                color: #FFFFFF;
+
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-start;
+
+        &__info{
+            width: 34%;
+            background: #FFFFFF;
+            border-radius: 30px;
+            padding: 32px;
+
+            >label{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                color: #353E6C;
+                padding-bottom: 14px;
+                border-bottom: 2px solid #F4F5F7;
+
+                display: flex;
+                margin-bottom: 20px;
+            }
+            
+            &__oneLine{
+                margin: 18px 0;
+                border-bottom: 2px solid #F4F5F7;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 16px;
+
+                >label:nth-child(1){
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.5px;
+                    color: #353E6C;
+                }
+
+                >label:nth-child(2){
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0.5px;
+                    color: #979797;
+                }
+
+            }
+            
+            &__mutasi{
+                margin: 18px 0;
+                border-bottom: 2px solid #F4F5F7;
+                display: flex;
+                justify-content: space-between;
+
+                >label{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.5px;
+                    color: #353E6C;
+                }
+
+                >div{
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        margin-bottom: 20px;
+
+                        >label{
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                            letter-spacing: 0.5px;
+                            color: #979797;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            
+            &__saldo{
+                margin: 18px 0;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 16px;
+
+                >label{
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                    letter-spacing: 0.5px;
+                    color: #353E6C;
+                }
+
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    >label:nth-child(1){
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.5px;
+                        color: #979797;
+                        margin-bottom: 10px;
+                    }
+    
+                    >label:nth-child(2){
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.5px;
+                        color: #979797;
+                        margin-bottom: 10px;
+                    }
+
+                    >p{
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.5px;
+                        color: #30D354;
+                    }
+
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        margin-bottom: 20px;
+
+                        >div{
+                            height: 2px;
+                            background-color:  #F4F5F7;
+                            width: 100px;
+                            margin-right: 10px;
+                            margin-top: 4px;
+                        }
+
+                        >span{
+                            color: #F36464;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        &__chart{
+            width: 50%;
+            background: #FFFFFF;
+            border-radius: 30px;
+            padding: 32px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.modal-filter {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+
+    >div{
+        border-bottom: 2px solid #F4F5F7;
+        padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        >h4{
+            color: #353E6C;
+        }
+
+        >svg{
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-filter:focus{
+    border: none;
+    outline: none;
+}
+
+// Overlay
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#8080804f;
+}
