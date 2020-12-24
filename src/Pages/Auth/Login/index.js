@@ -1,13 +1,27 @@
+import {useContext, useEffect, useState} from 'react'
 import BG from '../../../Assets/Images/BG.png'
 import Logo from '../../../Assets/Images/Logo-large.png'
 import {ReactComponent as IconUser} from '../../../Assets/Images/user.svg' 
 import {ReactComponent as IconLock} from '../../../Assets/Images/lock.svg' 
+import {AuthContextInitialization} from '../../../Context/AuthContext'
 
 const Login = ({history}) => {
 
+    const [isSubmiting, setIsSubmiting] = useState(false)
+
+    const authContext = useContext(AuthContextInitialization)
+    
     const submit = (event) => {
         event.preventDefault()
-        history.push('/')
+
+        setIsSubmiting(true)
+        authContext.setIsLoggedIn(true)
+        
+        setTimeout(() => {
+            setIsSubmiting(false)
+            history.push('/')
+        },3000)
+
     }
 
     return (
@@ -25,7 +39,7 @@ const Login = ({history}) => {
                         <IconLock/>
                         <input type="password" placeholder="PASSWORD" />
                     </div>
-                    <button type="submit">LOGIN</button>
+                    <button type="submit">{isSubmiting ? "LOADING..." : "LOGIN"}</button>
                     <p>Forgot Password?</p>
                 </form>
             </div>

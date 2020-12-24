@@ -30,6 +30,7 @@
         
         >.item{
             font-size: 12px;
+            cursor: pointer;
 
             >td{
                 border: 1px solid grey;
@@ -49,6 +50,10 @@
                     }
                 }
             }
+        }
+
+        >.item:hover{
+            background-color:  #F4F5F7;
         }
         
     }

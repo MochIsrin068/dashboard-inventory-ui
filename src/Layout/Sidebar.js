@@ -1,4 +1,5 @@
-import {NavLink, Link, useLocation} from 'react-router-dom'
+import {useContext} from 'react'
+import {NavLink, Link, useLocation, useHistory} from 'react-router-dom'
 import { ReactComponent as IconSetting } from '../Assets/Images/setting.svg';
 
 import { ReactComponent as IconOverview } from '../Assets/Images/overview.svg';
@@ -9,11 +10,23 @@ import { ReactComponent as IconOverviewActive } from '../Assets/Images/overview-
 import { ReactComponent as IconBarangActive } from '../Assets/Images/barang-active.svg';
 import { ReactComponent as IconInvoiceActive } from '../Assets/Images/invoice-active.svg';
 
+import {AuthContextInitialization} from '../Context/AuthContext'
+
 import Logo from '../Assets/Images/Logo.png'
 
 const Sidebar = () => {
+    const authContext = useContext(AuthContextInitialization)
     const location = useLocation()
+    const history = useHistory()
     const currentPath = location.pathname.split('/')[1]
+
+    const logout = () => {
+        authContext.setIsLoggedIn(false)
+        
+        setTimeout(() => {
+            history.push('/')
+        },1000)
+    }
 
     return (
         <aside className="sidebar">
@@ -66,10 +79,10 @@ const Sidebar = () => {
                 </nav>
             </div>
             
-            <Link className="sidebar__logout" to="/login">
+            <div className="sidebar__logout" onClick={() => logout()}>
                 <div><IconSetting/></div>
                 <span>Logout</span>
-            </Link>
+            </div>
         </aside>
     )
 }

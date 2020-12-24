@@ -49,7 +49,7 @@ const data = [
     }
 ]
 
-const Barang = () => {
+const Barang = ({history}) => {
     const [isOpenModalFilter, setIsOpenModalFilter] = useState(false)
     const onCloseModalFilter = () => setIsOpenModalFilter(false)
     return(
@@ -77,7 +77,7 @@ const Barang = () => {
                         <Table tableName={TABLE_NAME.BARANG}>
                             {data.map((item, index) => {
                                 return(
-                                    <tr key={item.id} className="item">
+                                    <tr key={item.id} className="item" onClick={() => history.push(`/barang/${item.id}/detail`)}>
                                         <td>{index + 1}</td>
                                         <td>{item.kode}</td>
                                         <td>{item.nama}</td>
